@@ -67,7 +67,6 @@ with pyodbc.connect('DRIVER='+driver+';SERVER=tcp:'+server+';PORT=1433;DATABASE=
             break
 
         for row in rows:
-            # Créer un objet Node avec comme label Artist et les propriétés adéquates
             n = Node("Artist", idArtist=row[0], primaryName=row[1], birthYear=row[2])
             importData.append(n)
 
