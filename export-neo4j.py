@@ -107,8 +107,8 @@ with pyodbc.connect('DRIVER='+driver+';SERVER=tcp:'+server+';PORT=1433;DATABASE=
                     graph.auto(),
                     data=importData[cat],
                     rel_type=cat.replace(" ", "_"),
-                    start_node=("Artist", "idArtist"),
-                    end_node=("Film", "idFilm"),
+                    start_node_key=("Artist", "idArtist"),
+                    end_node_key=("Film", "idFilm"),
                 )
             exportedCount += len(rows)
             print(f"{exportedCount}/{totalCount} relationships exported to Neo4j")
